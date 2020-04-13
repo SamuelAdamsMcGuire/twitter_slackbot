@@ -1,0 +1,6 @@
+vaderSentiment==3.2.1
+pandas
+sqlalchemy
+psycopg2-binary
+pymongo==3.7.1
+requests
