@@ -12,7 +12,7 @@ Clone repo, add your personal config script with required data, ensure Slackchan
 
 Then execute with the following in the CLI: 
 
-docker-compose build
+docker-compose build <br>
 docker-compose up
 
 ## Contributing
