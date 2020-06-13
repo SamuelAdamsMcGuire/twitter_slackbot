@@ -10,7 +10,7 @@ Docker is made so that programs written can be reproduced remotely be anyone aro
 
 Clone repo, add your personal config script with required data, ensure Slackchannel in slackbot script is set to the channel you want the results sent to. 
 
-Then execute with the following commands: docker-compose build
+Then execute with the following commands: docker-compose build <br>
                                           docker-compose up
 
 ## Contributing
