@@ -4,7 +4,8 @@ The goal of this project was getting acquainted with DOCKER. We had to create 5 
 
 ## Requirements
 
-Docker is made so that programs written can be reproduced remotely be anyone around the world. Therefor the only requirement to run this script other than access tokens and codes to the various websites and databases is DOCKER. Docker will take care of the rest. What you will have to make sure is et up to your system is the docker-compose file. The neccessary portmapping, directory paths and passwords will need to be set for your system.
+Install Docker:
+Docker is made so that programs written can be reproduced remotely by anyone around the world. Therefor the only requirement to run this script other than access tokens and codes to the various websites and databases is DOCKER. Docker will take care of the rest. What you will have to make sure is et up to your system is the docker-compose file. The neccessary portmapping, directory paths and passwords will need to be set for your system.
 
 ## Usage
 
