@@ -22,7 +22,7 @@ class PrintStreamListener(tweepy.StreamListener):
     """   
 
     def on_status(self, status):
-        # do something with incoming tweets
+        # specify what data should be captured from tweets
         tweet={'date':status.created_at, 'text':status.text}
         db.twitter.insert_one(tweet)
         print(f'{status.created_at}: {status.text}')
