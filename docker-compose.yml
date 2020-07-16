@@ -4,21 +4,24 @@ services:
   tweeter_collector:
     build: tweet_collector/
     volumes:
-    - ./tweet_collector/:/code
+    - ./tweet_collector:/code_tweet
+    - ./logs:/logs
     depends_on:
     - my_mongodb  
 
   slackbot:
     build: slackbot/
     volumes:
-    - ./slackbot/:/code
+    - ./slackbot:/code_bot
+    - ./logs:/logs
     depends_on:
     - my_postgresdb
 
   etl:
     build: etl/
     volumes:
-    - ./etl/:/code
+    - ./etl:/code_etl
+    - ./logs:/logs
     depends_on:
     - my_mongodb
     - my_postgresdb
@@ -26,18 +29,14 @@ services:
   my_mongodb:
     image: mongo
     ports:
-    - 27017:27017
+    - 27018:27017
 
   my_postgresdb:
     image: postgres
     ports:
-    - 5432:5432
+    - 5435:5432
+    restart: always
     environment:
-    - POSTGRES_USER=yourusername
-    - POSTGRES_PASSWORD=yourpassword
-  
- 
-
- 
-
+    - POSTGRES_USER=postgres
+    - POSTGRES_PASSWORD=postgres
   

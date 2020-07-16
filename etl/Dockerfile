@@ -1,9 +1,9 @@
 FROM python:3.6-slim
 
-WORKDIR /etl
+WORKDIR /code_etl
 
-COPY requirements.txt /etl
+COPY requirements.txt /code_etl
 RUN pip install -r requirements.txt
-ADD . /etl
+#ADD . /etl
 
 CMD ["python", "etl.py"]

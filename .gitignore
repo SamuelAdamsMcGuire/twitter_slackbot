@@ -1,3 +1,5 @@
+config.py
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -20,7 +22,6 @@ parts/
 sdist/
 var/
 wheels/
-pip-wheel-metadata/
 share/python-wheels/
 *.egg-info/
 .installed.cfg
@@ -137,7 +138,3 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
-
-# static files generated from Django application using `collectstatic`
-media
-static

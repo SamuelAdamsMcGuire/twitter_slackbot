@@ -1,9 +1,9 @@
 FROM python:3.6-slim
 
-WORKDIR /slackbot
+WORKDIR /code_bot
 
-COPY requirements.txt /slackbot
+COPY requirements.txt /code_bot
 RUN pip install -r requirements.txt
-ADD . /slackbot
+#ADD . /slackbot
 
 CMD ["python", "slackbot.py"]
