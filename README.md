@@ -5,7 +5,7 @@ From here the data is accessed from a third container and then a sentiment analy
 
 ## Requirements
 
-Install Docker: \
+Install Docker: \\
 Docker is made so that programs written can be reproduced remotely by anyone around the world. Therefore the only requirement to run this script other than access tokens and codes to the various websites and databases is DOCKER. Docker will take care of the rest. What you will have to make sure is et up to your system is the docker-compose file. The neccessary portmapping, directory paths and passwords will need to be set for your system.
 
 ## Usage
