@@ -12,7 +12,7 @@ Docker is made so that programs written can be reproduced remotely by anyone aro
 
 ## Usage
 
-Clone repo, add your personalise the config scripts with required data, ensure Slackchannel in slackbot script is set to the channel you want the results sent to. 
+Clone repo, personalise the config scripts with required data, ensure Slackchannel in slackbot script is set to the channel you want the results sent to. 
 
 Then execute with the following in the CLI: 
 
