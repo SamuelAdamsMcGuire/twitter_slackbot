@@ -17,13 +17,13 @@ logging.basicConfig(
 )
 
 # use create engine for making the connection to postgress db
-engine = create_engine(config.conn_string)
+engine = create_engine(f'{config.conn_string}sentiment_db')
 
 # using sqlalchemy to select all rows from the sentiment table the database
 selection = pd.read_sql('SELECT * FROM sentiment;', engine)
 
 # use random number to post random twitter posts from the db
-x = random.randint(0, 30)
+x = random.randint(0, 20)
 
 # pick out the sentiment of the random tweet
 senti = float(selection['sentiment'][x])

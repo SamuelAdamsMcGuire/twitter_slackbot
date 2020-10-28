@@ -23,7 +23,7 @@ mdb = pymongo.MongoClient(config.mongo_conn)
 logging.info(mdb)
 
 # collect results
-result = mdb.twitter.twitter.find()
+result = mdb.twitter.tweets.find()
 
 # set up sentiment analyzer
 s = SentimentIntensityAnalyzer()
@@ -35,11 +35,12 @@ for docs in result:
     row = (docs['text'], sentiment, docs['date'])
     tweet_list.append(row)
 
+logging.info(tweet_list)
 # put the list into a pandas dataframe
 df = pd.DataFrame(tweet_list, columns=['text', 'sentiment', 'timestamp'])
 logging.info(df)
 
-db = create_engine(config.post_conn)
+db = create_engine(f'{config.post_conn}sentiment_db')
 
 # set up for exceptions for connection
 try:

@@ -37,7 +37,7 @@ class PrintStreamListener(tweepy.StreamListener):
         # specify what data should be captured from tweets
         tweet = {'date': status.created_at, 'text': status.text}
         # db.twitter.insert_many(tweet)
-        db.twitter.insert_one(tweet)
+        db.tweets.insert_one(tweet)
         print(f'{status.created_at}: {status.text}')
 
 
@@ -48,7 +48,7 @@ stream = tweepy.Stream(
 
 # filter the stream to your chosen topic, language, filter level
 stream.filter(
-    track=['corona'],
+    track=['election'],
     languages=['en'],
     filter_level='low',
     is_async=True
